@@ -12,7 +12,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-public class InventoryCollectionService {
+public class InventoryCollectionService extends BaseInventoryService {
 
     public List<Product> findByName(List<Product> products, String keyword) {
         List<Product> result = new ArrayList<>();
@@ -38,8 +38,7 @@ public class InventoryCollectionService {
         return result;
     }
 
-    public Map<String, List<ProductStock>> groupProductStockByStockId(
-            List<ProductStock> productStocks) {
+    public Map<String, List<ProductStock>> groupProductStockByStockId(List<ProductStock> productStocks) {
         Map<String, List<ProductStock>> result = new HashMap<>();
 
         for (ProductStock productStock : productStocks) {

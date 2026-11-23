@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.collections.BaseInventoryService;
 import org.example.collections.InventoryCollectionService;
 import org.example.exceptions.InvalidCodeException;
 import org.example.exceptions.OutOfStockException;
@@ -9,6 +10,7 @@ import org.example.repositories.ProductRepository;
 import org.example.repositories.ProductStockRepository;
 import org.example.repositories.StockRepository;
 import org.example.repositories.UnitRepository;
+import org.example.stream.InventoryStreamService;
 
 import java.io.BufferedReader;
 import java.io.StringReader;
@@ -37,7 +39,7 @@ public class Main {
                 productStockRepository
         );
 
-        InventoryCollectionService collectionService = new InventoryCollectionService();
+        BaseInventoryService collectionService = new InventoryStreamService();
 
         System.out.println("Tim theo ten 'a':");
         collectionService.findByName(productRepository.getAll(), "a")
