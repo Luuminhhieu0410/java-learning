@@ -1,0 +1,5 @@
+report_date,generated_at,zone_id,product_id,product_name,stock_name,unit,quantity
+2026-11-25,2026-11-25T08:40:42.095832931Z,Asia/Ho_Chi_Minh,P001,"Áo thun, cổ tròn",Kho Hà Nội,cái,12.5
+2026-11-25,2026-11-25T08:40:42.095832931Z,Asia/Ho_Chi_Minh,P002,Quần jean,Kho Hà Nội,cái,8.0
+2026-11-25,2026-11-25T08:40:42.095832931Z,Asia/Ho_Chi_Minh,P003,Dép thể thao,Kho Phú Thọ,đôi,4.0
+2026-11-25,2026-11-25T08:40:42.095832931Z,Asia/Ho_Chi_Minh,P004,Cà phê rang xay,Kho Vĩnh Phúc,gói,20.0
