@@ -50,4 +50,11 @@ public abstract class BaseRepository<T> {
 
         return entity;
     }
+
+    @Override
+    public String toString() {
+        return "BaseRepository{" +
+                "data=" + data +
+                '}';
+    }
 }

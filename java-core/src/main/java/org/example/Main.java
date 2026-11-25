@@ -59,17 +59,12 @@ public class Main {
         collectionService.getUniqueStockIds(productStockRepository.getAll())
                 .forEach(System.out::println);
 
-        Map<String, Integer> stockQuantities = new HashMap<>();
-        stockQuantities.put("0", 5);
-        stockQuantities.put("1", 2);
-
         InventoryService inventoryService = new InventoryService(
-                stockQuantities,
                 productStockRepository
         );
 
         String[] exportCases = {"0", "9", "1"};
-        int[] exportQuantities = {2, 1, 3};
+        float[] exportQuantities = {2.0f, 1.0f, 3.0f};
 
         for (int i = 0; i < exportCases.length; i++) {
             try {
@@ -117,8 +112,8 @@ class DataInitializer {
         unitRepository.add(new Unit("1", "Doi", "doi", "Don vi doi"));
         unitRepository.add(new Unit("2", "Hop", "hop", "Don vi hop"));
 
-        productStockRepository.add(new ProductStock("0", "0", "0", "0"));
-        productStockRepository.add(new ProductStock("1", "1", "0", "0"));
-        productStockRepository.add(new ProductStock("2", "2", "1", "1"));
+        productStockRepository.add(new ProductStock("0", "0", "0", "0", 5.0f));
+        productStockRepository.add(new ProductStock("1", "1", "0", "0", 2.0f));
+        productStockRepository.add(new ProductStock("2", "2", "1", "1", 0.0f));
     }
 }

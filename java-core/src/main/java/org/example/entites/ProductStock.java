@@ -4,14 +4,16 @@ public class ProductStock {
     private String id;
     private String productId;
     private String stockId;
-    private String unitCountId;
+    private String unitId;
+    private float count;
 
 
-    public ProductStock(String id, String productId, String stockId, String unitCountId) {
+    public ProductStock(String id, String productId, String stockId, String unitId, float count) {
         this.id = id;
         this.productId = productId;
         this.stockId = stockId;
-        this.unitCountId = unitCountId;
+        this.unitId = unitId;
+        this.count = count;
     }
 
     public String getId() {
@@ -39,11 +41,30 @@ public class ProductStock {
     }
 
 
-    public String getUnitCountId() {
-        return unitCountId;
+    public String getUnitId() {
+        return unitId;
     }
 
-    public void setUnitCountId(String unitCountId) {
-        this.unitCountId = unitCountId;
+    public void setUnitId(String unitId) {
+        this.unitId = unitId;
+    }
+
+    public float getCount() {
+        return count;
+    }
+
+    public void setCount(float count) {
+        this.count = count;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductStock{" +
+                "id='" + id + '\'' +
+                ", productId='" + productId + '\'' +
+                ", stockId='" + stockId + '\'' +
+                ", unitId='" + unitId + '\'' +
+                ", count=" + count +
+                '}';
     }
 }
