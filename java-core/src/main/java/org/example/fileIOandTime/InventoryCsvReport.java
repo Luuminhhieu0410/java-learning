@@ -62,7 +62,7 @@ public class InventoryCsvReport {
         return reportPath;
     }
 
-    private static List<InventoryProduct> readProducts(Path inputPath)
+    public static List<InventoryProduct> readProducts(Path inputPath)
             throws IOException {
         var products = new ArrayList<InventoryProduct>();
         try (BufferedReader reader = Files.newBufferedReader(
@@ -131,7 +131,7 @@ public class InventoryCsvReport {
         return products;
     }
 
-    private static List<String> parseCsvLine(String line, int lineNumber)
+    public static List<String> parseCsvLine(String line, int lineNumber)
             throws IOException {
         var fields = new ArrayList<String>();
         var field = new StringBuilder();
@@ -187,7 +187,7 @@ public class InventoryCsvReport {
         return fields;
     }
 
-    private static String csvField(String value) {
+    public static String csvField(String value) {
         if (value.indexOf(',') >= 0 || value.indexOf('"') >= 0
                 || value.indexOf('\n') >= 0 || value.indexOf('\r') >= 0) {
             return "\"" + value.replace("\"", "\"\"") + "\"";
@@ -195,7 +195,7 @@ public class InventoryCsvReport {
         return value;
     }
 
-    private record InventoryProduct(
+    public record InventoryProduct(
             String id,
             String name,
             String stockName,
